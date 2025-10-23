@@ -14,9 +14,8 @@ Our experiments measure both accuracy and efficiency. Accuracy is evaluated usin
 1. Prepare requirements and compile fundamental protocols of SPDZ.
 
 ```
-cd MP-SPDZ
-sudo apt-get install automake build-essential clang cmake git libboost-dev libboost-thread-dev libntl-dev libsodium-dev libssl-dev libtool m4 python3 texinfo yasm libgmp-dev libmpfr-dev libmpc-dev
-sh protocol_compile.sh
+sudo apt update
+sudo apt install build-essential libboost-all-dev libgmp-dev
 ```
 
    Please make sure that CMake's version is at least 3.12 .
