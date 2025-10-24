@@ -24,6 +24,7 @@ PPRC/
 │   └── pprc.py             # Main script to run the PPRC
 ├── MurmurHash3.cpp # Hash function implementation
 ├── MurmurHash3.h   # Hash function header
+├── README.md
 ├── SHE.cpp         # SHE scheme implementation
 ├── SHE.h           # SHE header
 ├── bloomfilter.cpp # Bloom filter implementation
@@ -33,8 +34,7 @@ PPRC/
 ├── client.cpp # Query user (QU) client
 ├── center.cpp # central aggregator (CA)
 ├── server.cpp # Data holder (DH) server
-├── requirements.txt # Python dependencies
-└── README.md
+└── requirements.txt # Python dependencies
 ```
 
 ## 📊 Datasets
