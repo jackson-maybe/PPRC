@@ -12,14 +12,14 @@ This repository contains the implementation of **PPRC**, a Privacy-Preserving Ra
 ## 📂 Repository Structure
 ```text
 PPRC/
+├── datasets/       # Datasets used in the evaluation
 ├── experiment_acc/ # Accuracy evaluation scripts (Python)
-├── experiment_eff/ # Efficiency evaluation (C++ implementation)
-├── bloomfilter.cpp # Encrypted Bloom filter implementation
-├── bloomfilter.h # Bloom filter header
-├── SHE.cpp # Simplified Homomorphic Encryption primitives
-├── SHE.h # SHE header
 ├── MurmurHash3.cpp # Hash function implementation
-├── MurmurHash3.h # Hash function header
+├── MurmurHash3.h   # Hash function header
+├── SHE.cpp         # SHE scheme implementation
+├── SHE.h           # SHE header
+├── bloomfilter.cpp # Bloom filter implementation
+├── bloomfilter.h   # Bloom filter header
 ├── linearcounting.cpp # Linear counting sketch implementation
 ├── linearcounting.h # Linear counting header
 ├── client.cpp # Query user (QU) client
