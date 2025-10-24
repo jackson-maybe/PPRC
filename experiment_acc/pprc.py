@@ -183,7 +183,7 @@ if __name__ == "__main__":
     
     print(f"\nStarting simulation with {NUM_PROVIDERS} providers...")
     start_time = time.time()
-    
+    print("Testing 100 trials.")
     for number_trial_iter in range(100):
         errors, reals = pprc_test(
             b_error_rate=BF_ERROR_RATE,
