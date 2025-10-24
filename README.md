@@ -78,13 +78,13 @@ sudo apt install build-essential libboost-all-dev libgmp-dev
 
 ``` bash
 # Query user 
-g++ -std=c++17 -o client client.cpp bloomfilter.cpp SHE.cpp MurmurHash3.cpp -lboost_system -lgmpxx -lgmp
+g++ -std=c++17 -o client client.cpp bloomfilter.cpp SHE.cpp MurmurHash3.cpp -lboost_system -lgmpxx -lgmp -lpthread
 
 # Data holders
-g++ -std=c++17  -o server server.cpp MurmurHash3.cpp -lboost_system -lgmpxx -lgmp
+g++ -std=c++17  -o server server.cpp MurmurHash3.cpp -lboost_system -lgmpxx -lgmp -lpthread
 
 # Central aggregator 
-g++ -std=c++17 -o center center.cpp -lboost_system -lgmpxx -lgmp
+g++ -std=c++17 -o center center.cpp -lboost_system -lgmpxx -lgmp -lpthread
 ```
    
 **3. Run PPRC in three terminals**
