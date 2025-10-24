@@ -12,16 +12,20 @@ This repository contains the implementation of **PPRC**, a Privacy-Preserving Ra
 ## 📂 Repository Structure
 ```text
 PPRC/
-├── experiment_acc/       # Accuracy evaluation scripts (Python)
-├── experiment_eff/       # Efficiency evaluation (C++ implementation)
-├── bloomfilter.cpp       # Encrypted Bloom filter implementation
-├── bloomfilter.h         # Bloom filter header
-├── SHE.cpp               # Simplified Homomorphic Encryption primitives
-├── SHE.h                 # SHE header
-├── client.cpp            # Query user (QU) client
-├── center.cpp            # Computation aggregator (CA)
-├── server.cpp            # Data holder (DH) server
-├── requirements.txt      # Python dependencies
+├── experiment_acc/ # Accuracy evaluation scripts (Python)
+├── experiment_eff/ # Efficiency evaluation (C++ implementation)
+├── bloomfilter.cpp # Encrypted Bloom filter implementation
+├── bloomfilter.h # Bloom filter header
+├── SHE.cpp # Simplified Homomorphic Encryption primitives
+├── SHE.h # SHE header
+├── MurmurHash3.cpp # Hash function implementation
+├── MurmurHash3.h # Hash function header
+├── linearcounting.cpp # Linear counting sketch implementation
+├── linearcounting.h # Linear counting header
+├── client.cpp # Query user (QU) client
+├── center.cpp # Computation aggregator (CA)
+├── server.cpp # Data holder (DH) server
+├── requirements.txt # Python dependencies
 └── README.md
 ```
 
@@ -29,12 +33,16 @@ PPRC/
 We evaluate PPRC on three real-world and one synthetic dataset to assess both accuracy and efficiency.
 The real-world datasets—Yelp, Brightkite, and Gowalla—cover diverse geographic and social contexts.
 The synthetic dataset is uniformly generated within the San Francisco region (lat: 37.5–37.9, lon: –122.6––122.2) at four scales: 10K, 100K, 1M, and 10M records.
+
 | Dataset     | Type            | Records | Description |
-|--------------|-----------------|----------|-------------|
-| Yelp         | Business         | 21,900   | Merchant locations (Florida) |
-| Brightkite   | Social Network   | 115,383  | User check-ins |
-| Gowalla      | Social Network   | 196,561  | User check-ins |
-| Synthetic    | Generated       |  10K–10M | Uniformly generated within the San Francisco region (lat: 37.5–37.9, lon: -122.6–-122.2) |
+|--------------|-----------------|---------:|-------------|
+| Yelp         | Business        |   21,900 | Geographic business records (Florida) |
+| Brightkite   | Social Network  |  115,383 | User check-in records |
+| Gowalla      | Social Network  |  196,561 | User check-in records |
+| Synthetic    | Generated       |  10K–10M | Uniformly sampled within the San Francisco region (lat: 37.5–37.9, lon: –122.6––122.2) |
+
+
+
 
 
 ## ⚙️ Experimental Metrics
