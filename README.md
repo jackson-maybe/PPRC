@@ -12,19 +12,23 @@ This repository contains the implementation of **PPRC**, a Privacy-Preserving Ra
 ## 📂 Repository Structure
 ```text
 PPRC/
-├── experiment_acc/     # Accuracy evaluation scripts (Python)
-├── experiment_eff/     # Efficiency evaluation (C++ implementation)
-├── bloomfilter.cpp     # Encrypted Bloom filter implementation
-├── SHE.cpp             # Simplified Homomorphic Encryption primitives
-├── client.cpp          # Query user (QU) client
-├── center.cpp          # Computation aggregator (CA)
-├── server.cpp          # Data holder (DH) server
-├── requirements.txt    # Python dependencies
+├── experiment_acc/       # Accuracy evaluation scripts (Python)
+├── experiment_eff/       # Efficiency evaluation (C++ implementation)
+├── bloomfilter.cpp       # Encrypted Bloom filter implementation
+├── bloomfilter.h         # Bloom filter header
+├── SHE.cpp               # Simplified Homomorphic Encryption primitives
+├── SHE.h                 # SHE header
+├── client.cpp            # Query user (QU) client
+├── center.cpp            # Computation aggregator (CA)
+├── server.cpp            # Data holder (DH) server
+├── requirements.txt      # Python dependencies
 └── README.md
 ```
 
 ## 📊 Datasets
-We evaluate PPRC on both real-world and synthetic datasets to comprehensively assess its accuracy and efficiency. The real-world datasets include Yelp, Brightkite, and Gowalla, which provide diverse geographic and social network records. Specifically, we extract 21,900 merchant locations from the Yelp dataset in Florida, and 115,383 and 196,561 user check-ins from Brightkite and Gowalla, respectively. Furthermore, we construct a synthetic dataset by uniformly generating locations within the San Francisco region (latitude: 37.5–37.9, longitude: –122.6–122.2) at four scales: 10K, 100K, 1M, and 10M records. The datasets are as follows:
+We evaluate PPRC on three real-world and one synthetic dataset to assess both accuracy and efficiency.
+The real-world datasets—Yelp, Brightkite, and Gowalla—cover diverse geographic and social contexts.
+The synthetic dataset is uniformly generated within the San Francisco region (lat: 37.5–37.9, lon: –122.6––122.2) at four scales: 10K, 100K, 1M, and 10M records.
 | Dataset     | Type            | Records | Description |
 |--------------|-----------------|----------|-------------|
 | Yelp         | Business         | 21,900   | Merchant locations (Florida) |
