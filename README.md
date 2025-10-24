@@ -36,26 +36,25 @@ We evaluate PPRC on both real-world and synthetic datasets to comprehensively as
 ## ⚙️ Experimental Metrics
 Our experiments measure both accuracy and efficiency. Accuracy is evaluated using **Mean Absolute Error (MAE)** and **Mean Relative Error (MRE)** between the estimated and true range counts. Efficiency is assessed by measuring the **end-to-end computation time** (from query generation to result retrieval) and the **communication overhead** among the query user (QU), the computation aggregator (CA), and the data holders (DHs).
 ## 🧪 Running Accuracy Experiments
-1. Install Python dependencies.
+**1. Install Python dependencies**
  ```bash
    pip install -r requirements.txt
 ```
-2. Please run 
+**2. Run accuracy evaluation**
 
 ``` bash
-Run accuracy evaluation
 cd ./experiment_acc
 python pprc.py
 ```
 ## ⚡ Running Efficiency Experiments
-1. Install dependencies
+**1. Install dependencies**
 
 ``` bash
 sudo apt update
 sudo apt install build-essential libboost-all-dev libgmp-dev
 ```
    
-2. Compile the components
+**2. Compile the components**
 
 ``` bash
 # Query user 
@@ -68,7 +67,7 @@ g++ -std=c++17  -o server server.cpp MurmurHash3.cpp -lboost_system -lgmpxx -lgm
 g++ -std=c++17 -o center center.cpp -lboost_system -lgmpxx -lgmp
 ```
    
-3. Run PPRC in three terminals
+**3. Run PPRC in three terminals**
 
 Terminal 1 – Start the Central Aggregator (CA)
 
