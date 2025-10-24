@@ -13,7 +13,15 @@ This repository contains the implementation of **PPRC**, a Privacy-Preserving Ra
 ```text
 PPRC/
 ├── datasets/       # Datasets used in the evaluation
+│   ├── brightkite/         # The Brightkite dataset
+│   ├── gowalla/            # The Gowalla dataset
+│   ├── spatial/            # The Yelp dataset
+│   └── synthetic_datasets/ # The synthetic datasets 
 ├── experiment_acc/ # Accuracy evaluation scripts (Python)
+│   ├── bloom_filter.py     # Python implementation of Bloom Filter
+│   ├── data_provider.py    # Simulates data holders and their local datasets
+│   ├── linear_counting.py  # Python implementation of Linear Counting
+│   └── pprc.py             # Main script to run the PPRC
 ├── MurmurHash3.cpp # Hash function implementation
 ├── MurmurHash3.h   # Hash function header
 ├── SHE.cpp         # SHE scheme implementation
