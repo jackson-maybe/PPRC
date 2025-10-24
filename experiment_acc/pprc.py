@@ -143,7 +143,7 @@ if __name__ == "__main__":
     # Fraction of the total dataset held by each provider
     FRACTION_PER_PROVIDER = 0.1
     # Paths to the datasets
-    DATASET_FILENAME = 'synthetic_data_100000'
+    DATASET_FILENAME = 'quantize_gowalla_data'
     if DATASET_FILENAME == 'quantize_yelp_data':
         DATASET_PATH = f'../datasets/spatial/{DATASET_FILENAME}.xlsx'
     elif DATASET_FILENAME == 'quantize_brightkite_data':
