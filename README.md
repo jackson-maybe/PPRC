@@ -29,12 +29,12 @@ PPRC/
 ├── SHE.h           # SHE header
 ├── bloomfilter.cpp # Bloom filter implementation
 ├── bloomfilter.h   # Bloom filter header
+├── center.cpp # central aggregator (CA)
+├── client.cpp # Query user (QU) client
 ├── linearcounting.cpp # Linear counting sketch implementation
 ├── linearcounting.h # Linear counting header
-├── client.cpp # Query user (QU) client
-├── center.cpp # central aggregator (CA)
-├── server.cpp # Data holder (DH) server
-└── requirements.txt # Python dependencies
+├── requirements.txt # Python dependencies
+└── server.cpp # Data holder (DH) server
 ```
 
 ## 📊 Datasets
