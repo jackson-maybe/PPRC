@@ -23,7 +23,7 @@ PPRC/
 ├── linearcounting.cpp # Linear counting sketch implementation
 ├── linearcounting.h # Linear counting header
 ├── client.cpp # Query user (QU) client
-├── center.cpp # Computation aggregator (CA)
+├── center.cpp # central aggregator (CA)
 ├── server.cpp # Data holder (DH) server
 ├── requirements.txt # Python dependencies
 └── README.md
@@ -46,7 +46,7 @@ The synthetic dataset is uniformly generated within the San Francisco region (la
 
 
 ## ⚙️ Experimental Metrics
-Our experiments measure both accuracy and efficiency. Accuracy is evaluated using **Mean Absolute Error (MAE)** and **Mean Relative Error (MRE)** between the estimated and true range counts. Efficiency is assessed by measuring the **end-to-end computation time** (from query generation to result retrieval) and the **communication overhead** among the query user (QU), the computation aggregator (CA), and the data holders (DHs).
+Our experiments measure both accuracy and efficiency. Accuracy is evaluated using **Mean Absolute Error (MAE)** and **Mean Relative Error (MRE)** between the estimated and true range counts. Efficiency is assessed by measuring the **end-to-end computation time** (from query generation to result retrieval) and the **communication overhead** among the query user (QU), the central aggregator (CA), and the data holders (DHs).
 ## 🧪 Running Accuracy Experiments
 **1. Install Python dependencies**
  ```bash
