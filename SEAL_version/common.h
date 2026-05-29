@@ -24,11 +24,10 @@ inline seal::SEALContext create_fhe_context() {
     size_t poly_modulus_degree = 8192; 
     parms.set_poly_modulus_degree(poly_modulus_degree);
     
-    // 使用 BFV 官方优化的最大安全素数护盾
+    
     parms.set_coeff_modulus(seal::CoeffModulus::BFVDefault(poly_modulus_degree));
     
-    // 【完美修正】：16 位！这是 N=8192 的物理极限，对应素数 49153！
-    // 恰好能给最后的连乘挤出 5 bits 的救命噪声！
+    
     parms.set_plain_modulus(seal::PlainModulus::Batching(poly_modulus_degree, 17));
     
     return seal::SEALContext(parms);
