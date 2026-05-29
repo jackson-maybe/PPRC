@@ -25,15 +25,3 @@ target_link_libraries(center SEAL::seal Boost::system OpenMP::OpenMP_CXX)
 
 add_executable(server server.cpp bloomfilter.cpp MurmurHash3.cpp)
 target_link_libraries(server SEAL::seal Boost::system OpenMP::OpenMP_CXX)
-
-
-
-
-
-# # 编译 center (重点在这里：必须加上 SEAL::seal)
-# add_executable(center center.cpp)
-# target_link_libraries(center SEAL::seal Boost::system)
-
-# # 编译 server
-# add_executable(server server.cpp)
-# target_link_libraries(server SEAL::seal Boost::system)
