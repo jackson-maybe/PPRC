@@ -19,6 +19,8 @@ inline uint64_t modInverse(int64_t a, int64_t m) {
     return (uint64_t)x;
 }
 
+
+
 inline seal::SEALContext create_fhe_context() {
     seal::EncryptionParameters parms(seal::scheme_type::bfv);
     size_t poly_modulus_degree = 8192; 
@@ -46,3 +48,5 @@ inline std::string receive_data(tcp::socket& socket) {
     boost::asio::read(socket, boost::asio::buffer(&data[0], len));
     return data;
 }
+
+
