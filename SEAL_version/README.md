@@ -36,7 +36,7 @@ sudo cmake --install build
 
 We recommend using **Modern CMake** to compile the project.
 
-From the root directory of the project (e.g., inside the `stand` folder), run:
+From the root directory of the project, run:
 
 ```bash
 # Configure the build directory
