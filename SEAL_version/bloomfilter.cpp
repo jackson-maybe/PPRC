@@ -3,8 +3,8 @@
 
 
 BloomFilter *create_bloom_filter(int expected_elements, double false_positive_rate) {
+
     
-    // 直接构建
     BloomFilter *filter = (BloomFilter*)malloc(sizeof(BloomFilter)); 
     filter->hash_count = 3; 
     
@@ -41,7 +41,7 @@ bool bloom_filter_maybe_contains(BloomFilter *bf, int data_id) {
     return true; 
 }
 
-// �ͷŲ�¡��������Դ
+
 void destroy_bloom_filter(BloomFilter *bf) {
     free(bf->bits);
     free(bf);
