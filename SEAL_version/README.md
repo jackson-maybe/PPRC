@@ -29,40 +29,6 @@ cmake --build build
 sudo cmake --install build
 ```
 
-# 📁 Directory Structure & Dataset Preparation
-
-> ⚠️ **Important:**  
-> The `server.cpp` implementation currently expects spatial dataset CSV files at specific relative paths.  
-> Before running the server, you must ensure the dataset directory exists relative to your execution path.
-
-By default (`dataset_choice = 1`), the server looks for:
-
-```bash
-../dataset/brightkite/Brightkite_filter_quantized.csv
-```
-
-The CSV format should contain comma-separated coordinates:
-
-```csv
-x, y
-```
-
-Example project structure:
-
-```text
-PlaintextPPRC/
-├── CMakeLists.txt
-├── src/
-│   ├── client.cpp
-│   ├── center.cpp
-│   ├── server.cpp
-│   ├── common.h
-│   ├── bloomfilter.h
-│   └── MurmurHash3.h
-└── dataset/
-    └── brightkite/
-        └── Brightkite_filter_quantized.csv
-```
 
 ---
 
@@ -166,27 +132,4 @@ The client generates the spatial query range, builds the encrypted Bloom filters
 ./client 127.0.0.1 9011
 ```
 
----
 
-# ✅ Execution Flow Summary
-
-```text
-Client
-   ↓
-Center
-   ↓
-Server
-```
-
-Typical startup sequence:
-
-```bash
-# Terminal 1
-./server 9012
-
-# Terminal 2
-./center 9011 127.0.0.1 9012
-
-# Terminal 3
-./client 127.0.0.1 9011
-```
